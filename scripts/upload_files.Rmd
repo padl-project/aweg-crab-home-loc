@@ -19,14 +19,14 @@ Data
 ```{r}
 
 ## Finalized data folder url
-final_files_url <- " "
+final_files_url <- "https://drive.google.com/drive/u/0/folders/1XyAzK06QsF9F_JS1T0fnXMr2-VjXjmH-"
 
 ## Upload data 
 # **UPADATE FILE PATH AND NAME**
 
-drive_upload(media = paste0(getwd(),"/clean_data/FILE_NAME.csv"),
+drive_upload(media = paste0(getwd(),"/clean_data/2005_palmyra_atoll_crab_home_range_locations.csv"),
              path = as_id(final_files_url),
-             name = "FILE NAME",
+             name = "2005_palmyra_atoll_crab_home_range_locations.csv",
              type = "csv")
 
 
@@ -41,7 +41,7 @@ Metadata Doc
 
 drive_upload(media = here::here("metadata_doc/metadata_doc.docx"),
              path = as_id(final_files_url),
-             name = "FILE NAME_metadata.docx",
+             name = "wegmann_crab_home_loc_metadata.docx",
              type = "docx")
 ```
 

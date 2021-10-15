@@ -1,0 +1,43 @@
+---
+title: "Cleaning Crab Home Range Locaton data"
+author: "Camila Vargas"
+date: "10/15/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(googledrive)
+library(here)
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(lubridate)
+
+## Sets R not to use scientific notations
+options(scipen=999) 
+
+```
+
+
+## Read data
+```{r}
+excel_sheets(here::here("raw_data/Crab Home Range Locations.xls"))
+
+##Only sheet one has data
+
+crab_home_loc <- read_excel(here::here("raw_data/Crab Home Range Locations.xls")) %>% 
+  clean_names()
+
+```
+
+Data is clean. It just needs to be saved into csv format
+
+
+## Save data
+```{r}
+write_csv(crab_home_loc, here::here("clean_data/2005_palmyra_atoll_crab_home_range_locations.csv"))
+```
+
+

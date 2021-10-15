@@ -1,0 +1,9 @@
+attributeName	code	definition
+crab	Coconut Crab	
+crab	Hermit Crab	
+crab	Land Crab	
+species	Birgus latro	
+species	Cardisoma carnifex	
+species	Cardisoma rotundum	
+species	Coenobita brevimanus	
+species	Coenobita perlatus	

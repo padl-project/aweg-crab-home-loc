@@ -1,0 +1,9 @@
+attributeName	attributeDefinition	class	unit	dateTimeFormatString	missingValueCode	missingValueCodeExplanation
+id		character				
+point_number		numeric	!Add units here!			
+species		categorical				
+crab		categorical				
+waypoint		numeric	!Add units here!			
+x		numeric	!Add units here!			
+y		numeric	!Add units here!			
+date		Date		!Add datetime specifier here!		
