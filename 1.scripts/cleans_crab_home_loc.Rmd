@@ -23,21 +23,27 @@ options(scipen=999)
 
 ## Read data
 ```{r}
-excel_sheets(here::here("raw_data/Crab Home Range Locations.xls"))
+excel_sheets(here::here("6.raw_data/Crab Home Range Locations.xls"))
 
 ##Only sheet one has data
 
-crab_home_loc <- read_excel(here::here("raw_data/Crab Home Range Locations.xls")) %>% 
+crab_home_loc <- read_excel(here::here("6.raw_data/Crab Home Range Locations.xls")) %>% 
   clean_names()
 
 ```
 
-Data is clean. It just needs to be saved into csv format
+Data is clean. Date need to be formated and then save file into csv.
+
+```{r}
+clean_data <- crab_home_loc %>% 
+  mutate(date = date(date))
+```
+
 
 
 ## Save data
 ```{r}
-write_csv(crab_home_loc, here::here("clean_data/2005_palmyra_atoll_crab_home_range_locations.csv"))
+write_csv(clean_data, here::here("7.clean_data/palmyra_atoll_crab_home_range_locations_2005.csv"))
 ```
 
 
